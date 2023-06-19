@@ -1,0 +1,412 @@
+<!--Instagram clone made with bootstrap-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    
+    <meta
+      name="description"
+      content="Instagram clone made with bootstrap"
+    />
+    <meta name="keywords" content="HTML, CSS, Bootstrap" />
+    <meta name="author" content="Multimedios" />
+
+    <title>Ejercicio Instagram Bootstrap Multimedios</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/15214f0759.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <div class="app-container">
+      <!--navBar-->
+      <div class="navBar">
+        <nav class="navbar navbar-light bg-light">
+          <div class="nav-left">
+            <a class="navbar-brand" href="#">
+              <img
+                src="../resources/images/lens.png"
+                width="30"
+                height="30"
+                alt=""
+              />
+              <img
+                src="../resources/images/Instagram.png"
+                width="120"
+                height="40"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center right-navbar">
+            <button
+              type="button"
+              class="btn btn-success px-3 me-2"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Create a new post
+            </button>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa fa-gear"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Accesibility</a>
+                <a class="dropdown-item" href="#">Data and Privacy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" style="color: red">Log out</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--End of navBar-->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Create a new post
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Caption</h6>
+              <textarea
+                name="caption"
+                id="caption"
+                cols="30"
+                rows="2"
+                class="form-control"
+              ></textarea>
+              <div style="margin-top: 5px">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  style="font-size: 16px"
+                >
+                  <i class="bi-camera-fill"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  style="font-size: 16px"
+                >
+                  <i class="bi-geo-alt-fill"></i>
+                </button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-success">Publish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-container">
+        <!--Select view buttons-->
+
+        <div
+          class="btn-toolbar layout-toolbar"
+          role="toolbar"
+          aria-label="Choose layout"
+          style="margin-top: 10px"
+        >
+          <div class="btn-group mr-2">
+            <button
+              id="grid-btn"
+              ype="button"
+              class="btn"
+              data-toggle="tab"
+              data-target="#glayout"
+            >
+              <i class="bi-grid"></i>
+            </button>
+            <button
+              id="column-btn"
+              type="button"
+              class="btn"
+              data-toggle="tab"
+              data-target="#clayout"
+            >
+              <i class="bi-square-fill"></i>
+            </button>
+          </div>
+        </div>
+        <!--Content grid-->
+        <div class="gcontainer" id="glayout">
+          <div class="row">
+            <div class="col-md-4 column">
+              <img
+                class="grid-image"
+                src="../resources/images/1.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-4 column">
+              <img
+                class="grid-image"
+                src="../resources/images/2.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-4 column">
+              <img
+                class="grid-image"
+                src="../resources/images/3.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-4 column">
+              <img
+                class="grid-image"
+                src="../resources/images/4.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-4 column">
+              <img
+                class="grid-image"
+                src="../resources/images/5.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-4 column">
+              <img
+                class="grid-image"
+                src="../resources/images/6.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-4 column">
+              <img class="grid-image" src="../resources/images/7.jpg" alt="" class="img-fluid" />
+            </div>
+            <div class="col-md-4 column">
+              <img class="grid-image" src="../resources/images/8.jpg" alt="" class="img-fluid" />
+            </div>
+            <div class="col-md-4 column">
+              <img class="grid-image" src="../resources/images/9.jpg" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+        <div class="container hidden" id="clayout">
+          <!--Column view-->
+          <div class="row">
+            <div class="col-md-12 column">
+              <!--Post-->
+              <div class="pcontainer">
+                <div class="post-header">
+                  <div class="title">
+                    <p>Pops old chevy truck</p>
+                  </div>
+                  <div class="settings">
+                    <p style="font-size: 20px">08/26</p>
+                  </div>
+                </div>
+                <div class="body">
+                  <div class="images">
+                    <img
+                      class="image"
+                      src="../resources/images/1.jpg"
+                      alt="The back of a vintage green chevrolet truck"
+                    />
+                  </div>
+                  <div class="icons">
+                    <div class="icons">
+                      <div class="icon5 like">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon5">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon5">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                    </div>
+                    <div class="icon5">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <div class="likes">
+                    <p>
+                      Me gusta por <strong>Valentido Pintosoro</strong> y
+                      <strong>550 personas más</strong>
+                    </p>
+                    <p>
+                      Lorem 🚙 ipsum dolor sit 🪑 amet consectetur adipisicing
+                      elit. Exercitationem porro 🚬 nesciunt eveniet maxime
+                      laboriosam architecto?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--End post-->
+            </div>
+            <div class="col-md-12 column">
+              <div class="pcontainer">
+                <div class="post-header">
+                  <div class="title">
+                    <p>No more mess here!</p>
+                  </div>
+                  <div class="settings">
+                    <p style="font-size: 20px">08/25</p>
+                  </div>
+                </div>
+                <div class="body">
+                  <div class="images">
+                    <img
+                      class="image"
+                      src="../resources/images/2.jpg"
+                      alt="An aesthetic wooden workshop with tools and a table"
+                    />
+                  </div>
+                  <div class="icons">
+                    <div class="icons">
+                      <div class="icon5 like">
+                        <i class="fa fa-heart" style="color: red;"></i>
+                      </div>
+                      <div class="icon5">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon5">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                    </div>
+                    <div class="icon5">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <div class="likes">
+                    <p>
+                      Me gusta por <strong>MKBHD</strong> y
+                      <strong>1000 personas más</strong>
+                    </p>
+                    <p>
+                      Lorem 🧰⚒ ipsum dolor sit amet consectetur adipisicing ⚙
+                      elit. Exercitationem 🤣!! porro nesciunt eveniet maxime
+                      laboriosam architecto?.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 column">
+              <div class="pcontainer">
+                <div class="post-header">
+                  <div class="title">
+                    <p>Checkers is back from the vet!</p>
+                  </div>
+                  <div class="settings">
+                    <p style="font-size: 20px">08/23</p>
+                  </div>
+                </div>
+                <div class="body">
+                  <div class="images">
+                    <img
+                      class="image"
+                      src="../resources/images/3.jpg"
+                      alt="A photo of a cat named Checkers"
+                    />
+                  </div>
+                  <div class="icons">
+                    <div class="icons">
+                      <div class="icon5 like">
+                        <i class="far fa-heart"></i>
+                      </div>
+                      <div class="icon5">
+                        <i class="far fa-comment"></i>
+                      </div>
+                      <div class="icon5">
+                        <i class="far fa-paper-plane"></i>
+                      </div>
+                    </div>
+                    <div class="icon5">
+                      <i class="far fa-bookmark"></i>
+                    </div>
+                  </div>
+                  <div class="likes">
+                    <p>
+                      Me gusta por <strong>Jackie Brown</strong> y
+                      <strong>3700 personas más</strong>
+                    </p>
+                    <p>
+                      Lorem 😻!!! ipsum dolor sit amet consectetur adipisicing
+                      🧶 elit. Exercitationem porro nesciunt 💕 eveniet maxime
+                      laboriosam architecto?.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sign">
+      <p>Gerardo Vargas Fernández C02945</p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <script src="app.js"></script>
+</html>
